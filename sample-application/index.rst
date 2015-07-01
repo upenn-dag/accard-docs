@@ -337,6 +337,10 @@ Chemotherapy Drugs:
 Regimens
 --------
 
+.. note::
+    This section is not complete and does not represent anything. More to
+    follow at a later time.
+
 Samples
 -------
 
