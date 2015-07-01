@@ -341,6 +341,9 @@ Regimens
     This section is not complete and does not represent anything. More to
     follow at a later time.
 
+.. tip::
+    Developers! Read more about :doc:`The Regimen Component</developer/components/regimen>`.
+
 Samples
 -------
 
@@ -348,6 +351,7 @@ Samples
     This section is not complete, and does not represent anything. More
     to follow. Support for sample collection objects has been included within
     the database, but is not yet part of the main interface.
+
 
 Prototypes, and corresponding fields, have been added to the application to
 facilitate testing, and to serve as examples of what kinds of data may be
@@ -362,8 +366,6 @@ Whole Blood
 DNA
 ~~~
 
-.. tip::
-    Developers! Read more about :doc:`The Regimen Component</developer/components/regimen>`.
 
 
 
