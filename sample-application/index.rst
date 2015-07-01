@@ -337,12 +337,86 @@ Chemotherapy Drugs:
 Regimens
 --------
 
-.. note::
-    This section is not complete and does not represent anything. More to
-    follow at a later time.
-
 .. tip::
     Developers! Read more about :doc:`The Regimen Component</developer/components/regimen>`.
+
+Stressful Surgery Analysis
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Combines two activities, allowing you to determine the effect of stress testing
+leading up to, and after surgery.
+
+**Allowed drugs**:
+
+* None
+
+**Allowed activities**:
+
+* Stress Testing
+* Generic Surgery
+
+Overall Effect (choice, overall-effects):
+
+* Patient performed better
+* Patient performance stayed the same
+* Patient performed worse
+
+Combination Radiation & Chemotherapy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Combines radiation and chemotherapy into groups for easy access to data within
+one "round" of treatment. This regimen is used in an abstract sense, as it is
+not necessarily an actual regimen in the normal sense; it simply gives you easy
+access to your data by grouping common sets of activity data.
+
+**Allowed drugs**:
+
+* None
+
+**Allowed activities**:
+
+* Radiation
+* Chemotherapy
+
+Best Response (choice[#f2]_, best-responses):
+
+* Partial Response (PR)
+* Complete Response (CR)
+* No response (NR)
+
+
+Chemotherapy Regimen
+~~~~~~~~~~~~~~~~~~~~
+A demonstration of denormalization of data by design allowed a drug collection
+directly on a regimen. There are times where you do not wish to collect data
+about each individual activity, just the outcome of a group of activities. This
+is supported by allowing regimens to collect data that would normally be
+captured within individual activities.
+
+.. tip::
+    When collecting data directly on a regimen, be sure that you're not
+    attempting to collect data better suited to be collected on an activity.
+    This creates massive data inconsistencies in the long term.
+
+**Allowed drugs**:
+
+* Chemotherapy Drugs
+
+**Allowed activities**:
+
+* None
+
+Best Response (choice[#f2]_, best-responses):
+
+* Partial Response (PR)
+* Complete Response (CR)
+* No response (NR)
+
+Reason for Discontinuation(choice, reasons-for-discontinuation):
+
+* Patient completed regimen
+* Patient too sick to complete
+* Patient refused treatment
+* Patient died
+
 
 Samples
 -------
@@ -376,3 +450,5 @@ DNA
 .. [#f1] The body locations list is used in multiple places, use caution when
          editing this option.
 
+.. [#f2] The best response field is used in multiple places, use caution when
+         editing this field.
