@@ -92,14 +92,16 @@ activity itself.
 
 Patient Able to Perform (checkbox)
 
-Method (choice)
+Method (choice):
+
 * Treadmill
 * Stairs
 * Jumping Jacks
 
 Duration (number)
 
-Results (choice)
+Results (choice):
+
 * Poor
 * Average
 * Good
@@ -118,24 +120,28 @@ it's probably time to separate each into their own activity prototype.
     pathology reports. These are a prime candidate for the Accard result, and
     future version of Accard will have this reflected in this sample application.
 
-Surgeon (choice)
+Surgeon (choice):
+
 * Dr. Patel, MD.
 * Dr. Schmitt, MD.
 * Dr. Constantine, MD.
 
-Surgery Procedure (choice)
+Surgery Procedure (choice):
+
 * Procedure 1
 * Procedure 2
 * Procedure 3
 
-Site (choice) [#f1]_
+Site (choice) [#f1]_:
+
 * Head
 * Neck
 * Shoulder
 * Chest
 * Abdomen
 
-Method (choice)
+Method (choice):
+
 * Method 1
 * Method 2
 
@@ -146,11 +152,13 @@ Radiation
 An extremely simple radiation activity prototype. This is another candidate
 for results, but you may wish to keep the results denormalized.
 
-Type (choice)
+Type (choice):
+
 * Proton
 * Photon
 
-Site (choice) [#f1]_
+Site (choice) [#f1]_:
+
 * Head
 * Neck
 * Shoulder
@@ -169,7 +177,8 @@ for results, but you may wish to keep the results denormalized.
 
 Dose (number)
 
-Route (choice)
+Route (choice):
+
 * IV
 * Oral
 
