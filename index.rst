@@ -15,6 +15,8 @@ End-User Documentation
 ----------------------
 
 .. toctree::
+    :hidden:
+
     user/index
 
 **Are you an Accard user?** If the answer is "yes", then we have the place for
@@ -24,6 +26,8 @@ Developer Documentation
 -----------------------
 
 .. toctree::
+    :hidden:
+
     developer/index
 
 Get up and running, fast, with our :doc:`sample-application/index`. If you wish
@@ -31,6 +35,8 @@ to dig a little deeper, feel free to :doc:`learn Accard<developer/index>`.
 
 
 .. toctree::
+    :hidden:
+
     sample-application/index
     glossary
     credits
