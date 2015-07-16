@@ -30,13 +30,13 @@ Developer Documentation
 
     developer/index
 
-Get up and running, fast, with our :doc:`sample-application/index`. If you wish
+Get up and running, fast, with our :doc:`sandbox/index`. If you wish
 to dig a little deeper, feel free to :doc:`learn Accard<developer/index>`.
 
 
 .. toctree::
     :hidden:
 
-    sample-application/index
+    sandbox/index
     glossary
     credits

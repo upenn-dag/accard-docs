@@ -29,6 +29,6 @@ Accard Guides
     patient/index
 
 .. note::
-    This guide uses the :doc:`Sample Application <../sample-application/index>` to illustrate how to perform common tasks in Accard. The sandbox is used by more than one person, so you may find that some data may be missing, or different than you see here; this is normal.
+    This guide uses the :doc:`Sample Application <../sandbox/index>` to illustrate how to perform common tasks in Accard. The sandbox is used by more than one person, so you may find that some data may be missing, or different than you see here; this is normal.
 
-In this section, we explain how to accomplish common tasks within Accard. To follow along with these tasks, you may wish to :ref:`request access to the sandbox<sample-application-access>`.
+In this section, we explain how to accomplish common tasks within Accard. To follow along with these tasks, you may wish to :ref:`request access to the sandbox<sandbox-access>`.

@@ -1,14 +1,14 @@
-Sample Application
-==================
+Sandbox
+=======
 
 This application dataset creates a baseline Accard patient repository. This is not intended to serve as a full-functioning application, but as an introduction to Accard; as well as a simple example of common operations, typically required of a patient repository.
 
-.. _sample-application-access:
+.. _sandbox-access:
 
 Requesting Access
 -----------------
 
-To access the sample application, you must first make a request for the DAG to enable your account in the sandbox. We do not allow everyone access. Please send an email to pmacs-dag@mail.med.upenn.edu containing your PennKey and the dates on which you will be using the application. They will respond when your PennKey has been enabled, and instructions on how and where to access the sandbox will be sent along with this response.
+To access the sandbox, you must first make a request for the DAG to enable your account in the sandbox. We do not allow everyone access. Please send an email to pmacs-dag@mail.med.upenn.edu containing your PennKey and the dates on which you will be using the application. They will respond when your PennKey has been enabled, and instructions on how and where to access the sandbox will be sent along with this response.
 
 .. note::
     The sandbox environment resets daily. All data entered, and all user accounts added on a given day will be erased each day and replaced with sample data.
@@ -64,7 +64,7 @@ Generic Surgery
 ~~~~~~~~~~~~~~~
 Generic surgery example. A combined, single surgery activity is useful when your application collects the same data on every type of surgery you perform. If you find yourself requiring complex "logic" in order to create a surgery, it's probably time to separate each into their own activity prototype.
 
-    Surgeries typically yield pathology data, and one surgery may yield several pathology reports. These are a prime candidate for the Accard result, and future version of Accard will have this reflected in this sample application.
+    Surgeries typically yield pathology data, and one surgery may yield several pathology reports. These are a prime candidate for the Accard result, and future version of Accard will have this reflected in this sandbox.
 
 Radiation
 ~~~~~~~~~
@@ -75,7 +75,7 @@ Chemotherapy
 An extremely simple chemotherapy activity prototype. This is another candidate for results, but you may wish to keep the results denormalized.
 
 .. note::
-    Allows collection of :ref:`drugs<sample-application-drugs>` from the :ref:`chemotherapy drugs<sample-application-drugs-chemotherapy-drugs>` drug group.
+    Allows collection of :ref:`drugs<sandbox-drugs>` from the :ref:`chemotherapy drugs<sandbox-drugs-chemotherapy-drugs>` drug group.
 
 
 Attributes
@@ -106,13 +106,13 @@ Drug Use
 ~~~~~~~~
 Drug use history follows the same idea as occupational history. If the patient has done drugs; perhaps that drug use has contributed to the state of their disease.
 
-.. _sample-application-drugs:
+.. _sandbox-drugs:
 
 Drugs
 -----
 A few fictional, sample drugs have been provided.
 
-.. _sample-application-drugs-chemotherapy-drugs:
+.. _sandbox-drugs-chemotherapy-drugs:
 
 Chemotherapy Drugs:
 
