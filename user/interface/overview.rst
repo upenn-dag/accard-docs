@@ -1,7 +1,11 @@
 Overview
 ========
 
-The Accard user :ref:`UI<glossary-ui>` is centered around one main concept; the patient. Every action within the UI is performed from one of two perspectives;
+.. image:: /images/interface/overview.png
+   :align: center
+   :alt: The Accard Interface
+
+The Accard user :ref:`UI<glossary-ui>` is centered around one thing; the patient. Every action within the UI is performed from one of two perspectives:
 
 All Patients
 ------------
