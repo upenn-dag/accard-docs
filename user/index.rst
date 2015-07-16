@@ -17,6 +17,8 @@ Accard Concepts
     :hidden:
 
     objects
+    fields
+    prototypes
     interface/index
 
 Accard Guides
