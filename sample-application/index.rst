@@ -1,68 +1,47 @@
 Sample Application
 ==================
 
-This application dataset creates a baseline Accard patient repository. This is
-not intended to serve as a full-functioning application, but as an introduction
-to Accard; as well as a simple example of common operations, typically required
-of a patient repository.
+This application dataset creates a baseline Accard patient repository. This is not intended to serve as a full-functioning application, but as an introduction to Accard; as well as a simple example of common operations, typically required of a patient repository.
+
+.. _sample-application-access:
+
+Requesting Access
+-----------------
+
+To access the sample application, you must first make a request for the DAG to enable your account in the sandbox. We do not allow everyone access. Please send an email to pmacs-dag@mail.med.upenn.edu containing your PennKey and the dates on which you will be using the application. They will respond when your PennKey has been enabled, and instructions on how and where to access the sandbox will be sent along with this response.
+
+.. note::
+    The sandbox environment resets daily. All data entered, and all user accounts added on a given day will be erased each day and replaced with sample data.
 
 
 Patient
 -------
-Example fields have been provided as an example of extra data points you may
-wish to collect about a patient. 
-
-.. tip::
-    Developers! Read more about :doc:`The Patient Component </developer/components/patient>`.
-
-Fields
-~~~~~~
-
-Eye Color (choice, eye-colors):
-
-* Black
-* Blue
-* Brown
-* Hazel
-* Green
-
-Last Contact (date)
+Example fields have been provided as an example of extra data points you may wish to collect about a patient. 
 
 Phases
 ~~~~~~
 
-* Screening
-* Consented
-* In Treatment
-* Post Treatment
-* Follow Up
-* Archived
-
+* Screening - Patient is being evaluated for participation in study.
+* Consented - Patient has given consent for participation.
+* In Treatment - Patient is currently being treated.
+* Post Treatment - Patient has completed treatment.
+* Follow Up - Patient is in a follow-up cycle, post treatment.
+* Archived - Patient record has been archived.
 
 
 Diagnosis
 ---------
 
-Example fields have been added to the application in order to facilitate
-testing, and to serve as examples of what kinds of data may be collected using
-the diagnosis object extensions.
-
-.. tip::
-    Developers! Read more about :doc:`The Diagnosis Component</developer/components/diagnosis>`.
-
-Fields
-~~~~~~
-
-Diagnosed Elsewhere (checkboxbox)
+Example fields have been added to the application in order to facilitate testing, and to serve as examples of what kinds of data may be collected using the diagnosis object extensions.
 
 Phases
 ~~~~~~
 
-* Discovery
-* Diagnosed
-* In Treatment
-* Post Treatment
-* Cured
+* Discovery - Not yet diagnosed, but likely; tests being run.
+* Diagnosed - Diagnosed with disease.
+* In Treatment - Diagnosis is currently being treated.
+* Post Treatment - Diagnosis is gone, or almost gone; maintenance cylce.
+* Cured - No evidence of diagnosis.
 
 Code Groups/Codes
 ~~~~~~~~~~~~~~~~~
@@ -75,255 +54,63 @@ Main (main):
 
 Activities
 ----------
-Prototypes, and corresponding fields, have been added to the application to
-facilitate testing, and to serve as examples of what kinds of data may be
-collected using the activity component.
-
-.. tip::
-    Developers! Read more about :doc:`The Activity Component</developer/components/activity>`.
+Prototypes, and corresponding fields, have been added to the application to facilitate testing, and to serve as examples of what kinds of data may be collected using the activity component.
 
 Stress Testing
 ~~~~~~~~~~~~~~
-Patient stress test activity, and results. This activity resource contains
-information about the stress test itself, as well as resulting data from the
-test. Simpler activities, like a stress test yield a single set of results, so
-it is simpler to denormalize the data, storing the results directly on the
-activity itself.
-
-Patient Able to Perform (checkbox)
-
-Method (choice):
-
-* Treadmill
-* Stairs
-* Jumping Jacks
-
-Duration (number)
-
-Results (choice):
-
-* Poor
-* Average
-* Good
-* Excellent
-
-Comments (text)
+Patient stress test activity, and results. This activity resource contains information about the stress test itself, as well as resulting data from the test. Simpler activities, like a stress test yield a single set of results, so it is simpler to denormalize the data, storing the results directly on the activity itself.
 
 Generic Surgery
 ~~~~~~~~~~~~~~~
-Generic surgery example. A combined, single surgery activity is useful when
-your application collects the same data on every type of surgery you perform.
-If you find yourself requiring complex "logic" in order to create a surgery,
-it's probably time to separate each into their own activity prototype.
+Generic surgery example. A combined, single surgery activity is useful when your application collects the same data on every type of surgery you perform. If you find yourself requiring complex "logic" in order to create a surgery, it's probably time to separate each into their own activity prototype.
 
-    Surgeries typically yield pathology data, and one surgery may yield several
-    pathology reports. These are a prime candidate for the Accard result, and
-    future version of Accard will have this reflected in this sample application.
-
-Surgeon (choice):
-
-* Dr. Patel, MD.
-* Dr. Schmitt, MD.
-* Dr. Constantine, MD.
-
-Surgery Procedure (choice):
-
-* Procedure 1
-* Procedure 2
-* Procedure 3
-
-Site (choice) [#f1]_:
-
-* Head
-* Neck
-* Shoulder
-* Chest
-* Abdomen
-
-Method (choice):
-
-* Method 1
-* Method 2
-
-Comments
+    Surgeries typically yield pathology data, and one surgery may yield several pathology reports. These are a prime candidate for the Accard result, and future version of Accard will have this reflected in this sample application.
 
 Radiation
 ~~~~~~~~~
-An extremely simple radiation activity prototype. This is another candidate
-for results, but you may wish to keep the results denormalized.
-
-Type (choice):
-
-* Proton
-* Photon
-
-Site (choice) [#f1]_:
-
-* Head
-* Neck
-* Shoulder
-* Chest
-* Abdomen
-
-Grays (number)
+An extremely simple radiation activity prototype. This is another candidate for results, but you may wish to keep the results denormalized.
 
 Chemotherapy
 ~~~~~~~~~~~~
-An extremely simple chemotherapy activity prototype. This is another candidate
-for results, but you may wish to keep the results denormalized.
+An extremely simple chemotherapy activity prototype. This is another candidate for results, but you may wish to keep the results denormalized.
 
 .. note::
     Allows collection of :ref:`drugs<sample-application-drugs>` from the :ref:`chemotherapy drugs<sample-application-drugs-chemotherapy-drugs>` drug group.
 
-Dose (number)
-
-Route (choice):
-
-* IV
-* Oral
-
 
 Attributes
 ----------
-Prototypes, and corresponding fields, have been added to the application to
-facilitate testing, and to serve as examples of what kinds of data may be
-collected using the attribute component.
-
-.. tip::
-    Developers! Read more about :doc:`The Attribute Component</developer/components/attribute>`.
+Prototypes, and corresponding fields, have been added to the application to facilitate testing, and to serve as examples of what kinds of data may be collected using the attribute component.
 
 Entrance Questionnaire
 ~~~~~~~~~~~~~~~~~~~~~~
-A simple questionnaire example. This could be a larger list of questions, and
-could be a resource that is accepted multiple times during a patient's life.
+A simple questionnaire example. This could be a larger list of questions, and could be a resource that is accepted multiple times during a patient's life.
 
-Symptom Location (choice, body-locations) [#f1]_:
-
-* Head
-* Neck
-* Shoulder
-* Chest
-* Abdomen
-
-Symptom Severity (choice, symptom-severities):
-
-* Not Severe
-* Severe
-* Very Severe
-* I Don't Know
+.. note::
+    This attribute contains a "comment" field. While these fields aren't necessarily "good" for your data, they can provide an easy way to leave information about a record in an easily retrievable place.
 
 Family Medical History
 ~~~~~~~~~~~~~~~~~~~~~~
-An attribute resource dedicated to collecting data about the patients' family
-members history of disease. This example contains a default implementation,
-which accomodates one family member per attribute. To collect data about many
-family members, you would simply create multiple attributes.
-
-.. note::
-    This attribute contains a "comment" field. While these fields aren't
-    necessarily "good" for your data, they can provide an easy way to leave
-    information about a record in an easily retrievable place.
-
-Family Member (choice, family-members):
-
-* Mother
-* Father
-* Brother
-* Sister
-* Aunt
-* Uncle
-* Grandmother
-* Grandfather
-
-Side of Family (choice, family-sides):
-
-* Maternal
-* Paternal
-
-Diseases (choice, relevant-diseases, addable):
-
-* Diabetis
-* Heart Attack
-* High Blood Pressure
-
-Comments (text)
+An attribute resource dedicated to collecting data about the patients' family members history of disease. This example contains a default implementation, which accomodates one family member per attribute. To collect data about many family members, you would simply create multiple attributes.
 
 
 Behaviors
 ---------
-Prototypes, and corresponding fields, have been added to the application to
-facilitate testing, and to serve as examples of what kinds of data may be
-collected using the behavior component.
-
-.. tip::
-    Developers! Read more about :doc:`The Behavior Component</developer/components/behavior>`.
+Prototypes, and corresponding fields, have been added to the application to facilitate testing, and to serve as examples of what kinds of data may be collected using the behavior component.
 
 Occupation
 ~~~~~~~~~~
-This occupational history example contains fields relevant to discern if a
-patients' occupation has had anything to do with the course of their disease.
-This is a very simple example, yet it perfectly illustrates the type of
-information relevant to a behavior resource.
-
-Industry (choice, industies):
-
-* Automobile
-* Chemical
-* Construction
-* Energy
-* Financial
-* Healthcare
-* Industrial
-* Infrastructure
-* Metal
-* Retail
-* Technology
-* Textile
-* Transportation
-* Travel
-
-Handled Hazardous Materials (checkboxbox)
+This occupational history example contains fields relevant to discern if a patients' occupation has had anything to do with the course of their disease. This is a very simple example, yet it perfectly illustrates the type of information relevant to a behavior resource.
 
 Drug Use
 ~~~~~~~~
-Drug use history follows the same idea as occupational history. If the patient
-has done drugs; perhaps that drug use has contributed to the state of their
-disease.
-
-Drug Type (choice, drug-types):
-
-* Alcohol
-* Amphetamines
-* Cannabis
-* Cocaine
-* Crack Cocaine
-* Ecstasy
-* Heroin
-* Inhalants
-* Ketamine
-* LSD
-* Mushrooms
-* Methanphetamine
-* PCP
-
-Frequency (choice, frequencies):
-
-* Hourly
-* Daily
-* Weekly
-* Bi-Weekly
-* Monthly
-* Occasional
-
+Drug use history follows the same idea as occupational history. If the patient has done drugs; perhaps that drug use has contributed to the state of their disease.
 
 .. _sample-application-drugs:
 
 Drugs
 -----
 A few fictional, sample drugs have been provided.
-
-.. tip::
-    Developers! Read more about :doc:`The Drug Component </developer/components/drug>`.
 
 .. _sample-application-drugs-chemotherapy-drugs:
 
@@ -337,13 +124,9 @@ Chemotherapy Drugs:
 Regimens
 --------
 
-.. tip::
-    Developers! Read more about :doc:`The Regimen Component</developer/components/regimen>`.
-
 Stressful Surgery Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-Combines two activities, allowing you to determine the effect of stress testing
-leading up to, and after surgery.
+Combines two activities, allowing you to determine the effect of stress testing leading up to, and after surgery.
 
 **Allowed drugs**:
 
@@ -354,18 +137,9 @@ leading up to, and after surgery.
 * Stress Testing
 * Generic Surgery
 
-Overall Effect (choice, overall-effects):
-
-* Patient performed better
-* Patient performance stayed the same
-* Patient performed worse
-
 Combination Radiation & Chemotherapy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Combines radiation and chemotherapy into groups for easy access to data within
-one "round" of treatment. This regimen is used in an abstract sense, as it is
-not necessarily an actual regimen in the normal sense; it simply gives you easy
-access to your data by grouping common sets of activity data.
+Combines radiation and chemotherapy into groups for easy access to data within one "round" of treatment. This regimen is used in an abstract sense, as it is not necessarily an actual regimen in the normal sense; it simply gives you easy access to your data by grouping common sets of activity data.
 
 **Allowed drugs**:
 
@@ -376,25 +150,12 @@ access to your data by grouping common sets of activity data.
 * Radiation
 * Chemotherapy
 
-Best Response (choice[#f2]_, best-responses):
-
-* Partial Response (PR)
-* Complete Response (CR)
-* No response (NR)
-
-
 Chemotherapy Regimen
 ~~~~~~~~~~~~~~~~~~~~
-A demonstration of denormalization of data by design allowed a drug collection
-directly on a regimen. There are times where you do not wish to collect data
-about each individual activity, just the outcome of a group of activities. This
-is supported by allowing regimens to collect data that would normally be
-captured within individual activities.
+A demonstration of denormalization of data by design allowed a drug collection directly on a regimen. There are times where you do not wish to collect data about each individual activity, just the outcome of a group of activities. This is supported by allowing regimens to collect data that would normally be captured within individual activities.
 
 .. tip::
-    When collecting data directly on a regimen, be sure that you're not
-    attempting to collect data better suited to be collected on an activity.
-    This creates massive data inconsistencies in the long term.
+    When collecting data directly on a regimen, be sure that you're not attempting to collect data better suited to be collected on an activity. This creates massive data inconsistencies in the long term.
 
 **Allowed drugs**:
 
@@ -404,35 +165,14 @@ captured within individual activities.
 
 * None
 
-Best Response (choice[#f2]_, best-responses):
-
-* Partial Response (PR)
-* Complete Response (CR)
-* No response (NR)
-
-Reason for Discontinuation(choice, reasons-for-discontinuation):
-
-* Patient completed regimen
-* Patient too sick to complete
-* Patient refused treatment
-* Patient died
-
-
 Samples
 -------
 
 .. note::
-    This section is not complete, and does not represent anything. More
-    to follow. Support for sample collection objects has been included within
-    the database, but is not yet part of the main interface.
+    This section is not complete, and does not represent anything. More to follow. Support for sample collection objects has been included within the database, but is not yet part of the main interface.
 
 
-Prototypes, and corresponding fields, have been added to the application to
-facilitate testing, and to serve as examples of what kinds of data may be
-collected using the sample component.
-
-.. tip::
-    Developers! Read more about :doc:`The Sample Component</developer/components/sample>`.
+Prototypes, and corresponding fields, have been added to the application to facilitate testing, and to serve as examples of what kinds of data may be collected using the sample component.
 
 Whole Blood
 ~~~~~~~~~~~
@@ -440,16 +180,4 @@ Whole Blood
 DNA
 ~~~
 
-
-
-
-
-
-.. rubric:: Footnotes
-
-.. [#f1] The body locations list is used in multiple places, use caution when
-         editing this option.
-
-.. [#f2] The best response field is used in multiple places, use caution when
-         editing this field.
 

@@ -5,6 +5,7 @@ Glossary
     Document all glossary terms.
 
 .. _glossary-bundle:
+
 Bundle
     A developer term meant to represent the framework specific implementation of a :ref:`component <glossary-component>`.
 
