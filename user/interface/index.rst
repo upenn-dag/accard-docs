@@ -1,6 +1,10 @@
 The Interface
 =============
 
+.. image:: /images/interface/overview.png
+   :align: center
+   :alt: The Accard Interface
+
 .. toctree::
 
     overview
@@ -11,6 +15,3 @@ The Interface
     grid
     inspectors
     patient-detail
-
-
-Blah, blah, blah.

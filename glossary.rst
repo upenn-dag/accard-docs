@@ -38,3 +38,8 @@ Object
 
 Prototype
     A domain extension; acting as base object + extra fields and functionality.
+
+.. _glossary-ui:
+
+User Interface : UI
+    Accard's web-based interface.
