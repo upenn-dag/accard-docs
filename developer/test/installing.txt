@@ -1,0 +1,16 @@
+This is done by adding the following code to the ``composer.json`` file.
+
+.. code-block:: js
+
+    {
+        // ...
+        "require-dev": {
+            "codeception/codeception": "dev-master",
+            "codeception/mockery-module": "dev-master"
+        },
+        "config": {
+            "bin-dir": "bin"
+        }
+    }
+
+Once these lines have been added, run ``composer update`` to download the Codeception and Mockery libraries to your Composer ``vendor`` folder.

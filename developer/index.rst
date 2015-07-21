@@ -13,4 +13,5 @@ Developers Guide
     technology
     installation
     components/index
+    test/index
 
