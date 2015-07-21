@@ -17,11 +17,11 @@ Opening
 Using
 -----
 
-The navigation drawer contains links to all sub-applications within Accard. This provides the ability to get to any part of Accard very quickly. Clicking on any item in the navigation drawer will change the active sub-application and automatically close the drawer.
+The navigation drawer contains links to common sub-applications within Accard. This provides the ability to get to any part of Accard very quickly. Clicking on any item in the navigation drawer will change the active sub-application and automatically close the drawer.
 
-1. Patients - Patient grid subapp
-2. New Patient - New patient subapp
-3. Outcomes - Outcomes subapp (experimental)
+1. Patients - Work with all patients at the same time
+2. New Patient - Create a new patient
+3. Outcomes - Export your data (experimental)
 4. Reports - *coming soon*
 5. System Log - *coming soon*
-6. Credits - *Credits subapp page*
+6. Credits - See who's responsible for Accard
